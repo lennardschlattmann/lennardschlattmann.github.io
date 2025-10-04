@@ -6,11 +6,11 @@
  */
 
 html {
-  scroll-padding-top: 3.5rem;
+  scroll-padding-top: 2rem;
 }
 
 header {
-  padding-top: 5.5rem;
+  padding-top: 1.5rem;
 }
 
 b {
@@ -78,4 +78,207 @@ pre {
   display: block;
   padding: 0; /* removes the left and right padding */
   margin: 0; /* removes the left and right margins */
+}
+
+/* ***************** Default Light Mode **************** */
+body {
+    background-color: #ffffff;
+    color: black;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light/Dark Themes */
+body.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark-theme {
+    background-color: #100e1cd7;
+    color: #ffffff;
+}
+
+/* Dropdown styling */
+.theme-dropdown .dropdown-menu {
+  min-width: 100px;
+  padding: 0.25rem 0;
+  font-size: 0.85rem;
+}
+
+/* Make the dropdown items yellow */
+.theme-dropdown .dropdown-item {
+  color: #ffa600; /* gold/yellow */
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  transition: color 0.3s ease;
+}
+
+/* Optional: change color on hover */
+.theme-dropdown .dropdown-item:hover {
+  color: #FFA500; /* a slightly darker yellow/orange on hover */
+}
+
+/************* Rounded Photo Styling **************/
+img.round-photo {
+  border-radius: 10%; /* makes it perfectly circular */
+  object-fit: cover;  /* ensures the image covers the container without stretching */
+  width: 250px;       /* adjust size as needed */
+  height: 250px;
+  border: 2px solid #fff; /* optional border */
+  margin-left: -60px; 
+}
+
+.portrait-title {
+  margin-left: -60px;  /* moves text with the photo */
+}
+
+/************* Link Styling **************/
+a {
+  color: orange;
+  text-decoration: none; /* removes underline */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: darkorange; /* hover effect */
+}
+
+/* Parent column: vertically stacked, centered */
+.col-lg-4.text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Icon list: full width + centered */
+.network-icon {
+  display: flex;
+  justify-content: center; /* centers icons horizontally */
+  align-items: center;
+  gap: 25px; /* equal space between icons */
+  width: 100%; /* make sure it spans the photo width */
+  padding: 0;
+  margin: 200px 0 0 -60px; /* top margin only */
+  list-style: none;
+  transform: translateY(-30px); /* moves up 10px */
+}
+
+/* Icons themselves */
+.social-icon {
+  font-size: 26px;
+}
+
+/* Info Columns Styling */
+.info-columns {
+  display: flex;
+  justify-content: space-between; /* space between the two sections */
+  align-items: flex-start;
+  gap: 40px; /* spacing between columns */
+  flex-wrap: wrap; /* stacks them nicely on smaller screens */
+}
+
+.info-columns .column {
+  flex: 1 1 45%; /* responsive width: about half each */
+}
+
+.info-columns h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.info-columns ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.info-columns li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* Education Column Specific Styling */
+
+.education-column h2 {
+  margin-top: 20px; /* aligns icon vertically */
+  color: white; /* soft blue-grey title */
+  margin-left: -320px; /* adjust value as needed */
+}
+
+.info-columns h2 {
+  margin-top: 20px; /* aligns icon vertically */
+  color: white; /* soft blue-grey title */
+}
+
+.education-list {
+  list-style: none;
+  padding: 0;
+  margin-left: -170px; /* adjust value as needed */
+}
+
+.education-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-left: -170px; /* adjust value as needed */
+  margin-top: 4px; /* aligns icon vertically */
+}
+
+.education-list i {
+  color: #ffffff;
+  margin-left: -170px; /* adjust value as needed */
+  margin-right: 6px;
+  margin-top: 4px; /* aligns icon vertically */
+}
+
+.edu-details strong {
+  color: #ffffff;
+}
+
+.edu-details span {
+  color: #a0a7b3;
+  font-size: 0.8rem;
+}
+
+/* Moves only the Welcome text area slightly lower */
+.col-lg-8.text-start {
+  margin-top: 5px; /* adjust this value (e.g., 20–40px) for more or less space */
+}
+
+/* Move the disclaimer text lower */
+p.disclaimer {
+  margin-top: 10px !important; /* pushes the paragraph down */
+  display: block;
+}
+
+/* Shift all sections from "Working Papers" onward to the right */
+.shifted-sections {
+  margin-left: 100px;  /* adjust this number — try 80–150px depending on how far you want */
+}
+
+/* Optional: keep it responsive on small screens */
+@media (max-width: 768px) {
+  .shifted-sections {
+    margin-left: 0; /* reset shift on mobile for proper alignment */
+  }
+}
+/* Ensure abstracts are readable in both light and dark modes */
+.card.info {
+  background-color: #ffffff !important; /* keep card background white */
+  color: #000000 !important; /* always use black text */
+}
+
+/* Optional: also fix text inside collapsed elements */
+.card.info p,
+.card.info a,
+.card.info b {
+  color: #000000 !important;
+}
+
+/* Make abstract boxes narrower */
+.card.info {
+  max-width: 90%;        /* makes it slightly narrower overall */
+  margin-left: 0cm;     /* centers it if smaller than container */
+  margin-right: 1cm;    /* equal spacing on both sides */
+  border-radius: 10px;   /* optional: soften corners */
 }

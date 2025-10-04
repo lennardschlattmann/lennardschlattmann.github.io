@@ -6,7 +6,6 @@
 //
 // Scripts
 // 
-
 window.addEventListener('DOMContentLoaded', event => {
 
     // Activate Bootstrap scrollspy on the main nav element
@@ -16,7 +15,7 @@ window.addEventListener('DOMContentLoaded', event => {
             target: '#mainNav',
             offset: 74,
         });
-    };
+    }
 
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
@@ -31,4 +30,32 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+});
+
+// theme.js
+function setTheme(theme) {
+  if (theme === 'dark') {
+    document.body.classList.add('dark-theme');
+    document.body.classList.remove('light-theme');
+  } else {
+    document.body.classList.add('light-theme');
+    document.body.classList.remove('dark-theme');
+  }
+  localStorage.setItem('theme', theme);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  // DEFAULT TO DARK MODE
+  const savedTheme = localStorage.getItem('theme') || 'dark'; // <- changed from 'light' to 'dark'
+  setTheme(savedTheme);
+
+  document.querySelector('.js-set-theme-light').addEventListener('click', function(e) {
+    e.preventDefault();
+    setTheme('light');
+  });
+
+  document.querySelector('.js-set-theme-dark').addEventListener('click', function(e) {
+    e.preventDefault();
+    setTheme('dark');
+  });
 });
