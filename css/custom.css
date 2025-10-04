@@ -103,6 +103,11 @@ img.round-photo {
   font-size: 0.9rem;
 }
 
+.mobile-break {
+  display: inline; /* default for desktop */
+}
+
+
 /* =========================
    SECTIONS & PAPERS
    ========================= */
@@ -279,9 +284,15 @@ body.dark-theme .card.info {
     font-size: 0.85rem;
   }
 
+  .mobile-break {
+    display: block; /* forces line break on mobile */
+    margin-top: 0.5rem; /* optional: add spacing */
+  }
+
   .welcome-text .disclaimer {
     font-size: 0.75rem;
   }
+
 
   /* Stack info columns vertically for mobile */
   .info-columns {
@@ -328,7 +339,7 @@ body.dark-theme .card.info {
   }
 
   .education-list span {
-    color: #a0a7b3;
+    color: #a0a7b3 !important;
     font-size: 0.75rem !important;
   }
 
