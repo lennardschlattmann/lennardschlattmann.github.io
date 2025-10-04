@@ -1,16 +1,26 @@
 /*!
  * Custom CSS for Lennard Schlattmann
- * Fixes: "Research Interests" + "Education" alignment (side-by-side on all screens)
+ * Optimized for Bootstrap 5
+ * Fixes: "Research Interests" + "Education" always side-by-side
  */
 
 /* =========================
-   GENERAL BASE STYLES
+   BASE STYLES
    ========================= */
+html {
+  scroll-padding-top: 2rem;
+}
+
 body {
   background-color: #ffffff;
-  color: #000;
+  color: #000000;
   font-family: Arial, sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-theme {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 body.dark-theme {
@@ -33,22 +43,128 @@ a:hover {
 }
 
 /* =========================
-   INFO COLUMNS (Research + Education)
+   HEADER / IMAGE
+   ========================= */
+header {
+  padding-top: 1.5rem;
+}
+
+img.round-photo {
+  border-radius: 10%;
+  object-fit: cover;
+  width: 250px;
+  height: 250px;
+  border: 2px solid #fff;
+  display: block;
+  margin: 0 auto 15px auto;
+}
+
+.portrait-title {
+  text-align: center;
+}
+
+/* =========================
+   SOCIAL ICONS
+   ========================= */
+.network-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.social-icon {
+  font-size: 22px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: orange;
+}
+
+/* =========================
+   SECTIONS & PAPERS
+   ========================= */
+.section_top {
+  margin-bottom: 0.2cm;
+  margin-top: 0cm;
+}
+
+.section {
+  margin-bottom: 0.35cm;
+  margin-top: 0.15cm;
+}
+
+.p_title_p {
+  margin-bottom: 7px;
+  margin-top: 5px;
+}
+
+.p_abstract_p {
+  margin-bottom: 20px;
+}
+
+/* Abstract card styling */
+.info {
+  padding: 15px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.card:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,0.2);
+}
+
+/* Toggle arrows for abstracts */
+.showAbstract[aria-expanded="false"]::after {
+  font-family: FontAwesome;
+  content: " \f078";
+}
+
+.showAbstract[aria-expanded="true"]::after {
+  font-family: FontAwesome;
+  content: " \f077";
+}
+
+/* =========================
+   LIGHT / DARK CARD COLORS
+   ========================= */
+body.light-theme .card.info {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark-theme .card.info {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.card.info {
+  max-width: 90%;
+  margin-left: 0;
+  margin-right: 1cm;
+  border-radius: 10px;
+}
+
+/* =========================
+   INFO COLUMNS (Research Interests + Education)
    ========================= */
 .info-columns {
-  display: flex !important;             /* override Bootstrap’s .flex-column on mobile */
-  flex-direction: row !important;       /* always side-by-side */
-  flex-wrap: nowrap;                    /* prevent wrapping */
+  display: flex !important;           /* force horizontal layout */
+  flex-direction: row !important;     /* always side-by-side */
+  flex-wrap: nowrap;                  /* prevent stacking */
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
-  text-align: left;                     /* left-aligned text by default */
-  overflow-x: auto;                     /* allows horizontal scroll if very narrow */
+  text-align: left;                   /* left-aligned text */
+  overflow-x: auto;                   /* horizontal scroll if needed */
 }
 
 .info-columns .column,
 .info-columns .education-column {
-  flex: 0 0 48%;                        /* two equal-width columns */
+  flex: 0 0 48%;                       /* equal width columns */
   min-width: 200px;
 }
 
@@ -59,21 +175,20 @@ a:hover {
   text-align: left;
 }
 
-.info-columns ul {
+.interest-list,
+.education-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.info-columns li {
+.interest-list li,
+.education-list li {
   margin-bottom: 6px;
   line-height: 1.5;
   text-align: left;
 }
 
-/* =========================
-   EDUCATION LIST ICONS
-   ========================= */
 .education-list li {
   display: flex;
   align-items: flex-start;
@@ -86,36 +201,7 @@ a:hover {
 }
 
 /* =========================
-   MOBILE OPTIMIZATION
-   ========================= */
-@media (max-width: 768px) {
-  body {
-    font-size: 0.85rem;
-  }
-
-  .info-columns {
-    flex-direction: row !important;     /* keep side-by-side on mobile */
-    gap: 10px;
-    justify-content: space-between;
-  }
-
-  .info-columns .column,
-  .info-columns .education-column {
-    flex: 0 0 48%;                      /* narrower so both fit */
-    min-width: 160px;
-  }
-
-  .info-columns h2 {
-    font-size: 1rem;
-  }
-
-  .info-columns li {
-    font-size: 0.8rem;
-  }
-}
-
-/* =========================
-   SHIFTED SECTIONS
+   SHIFTED SECTIONS BELOW HEADER
    ========================= */
 .shifted-sections {
   margin-left: 100px;
@@ -124,5 +210,37 @@ a:hover {
 @media (max-width: 768px) {
   .shifted-sections {
     margin-left: 0;
+  }
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+   ========================= */
+@media (max-width: 576px) {
+  body {
+    font-size: 0.85rem;               /* smaller base font */
+  }
+
+  .info-columns {
+    flex-direction: row !important;    /* keep side-by-side on mobile */
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  .info-columns .column,
+  .info-columns .education-column {
+    flex: 0 0 48%;                     /* narrower columns for mobile */
+    min-width: 160px;
+  }
+
+  .info-columns h2 {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .interest-list li,
+  .education-list li {
+    font-size: 0.8rem;
+    text-align: left;
   }
 }
