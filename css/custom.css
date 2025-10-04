@@ -104,7 +104,7 @@ img.round-photo {
 }
 
 .mobile-break {
-  display: inline; /* default for desktop */
+  display: inline; /* desktop default */
 }
 
 
@@ -285,8 +285,8 @@ body.dark-theme .card.info {
   }
 
   .mobile-break {
-    display: block; /* forces line break on mobile */
-    margin-top: 0.5rem; /* optional: add spacing */
+    display: block;      /* forces line break on mobile */
+    margin-top: 0.5rem;  /* optional spacing */
   }
 
   .welcome-text .disclaimer {
