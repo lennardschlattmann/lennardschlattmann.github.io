@@ -313,20 +313,14 @@ body.dark-theme .card.info {
   .info-columns .education-column .education-list {
     display: flex;
     flex-direction: column;
+    gap: -0.3rem; /* smaller space between items */
     margin-bottom: 1.5rem !important; /* space after the list */
   }
 
   /* Each education item should appear on a single line */
   .info-columns .education-column .education-list li {
     white-space: normal; /* allow line wrapping if needed */
-  }
-
-    /* Reduce space between each education item */
-  .info-columns .education-column .education-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem; /* smaller space between items */
-    margin-bottom: 1rem; /* space after the list */
+    gap: -0.3rem; /* smaller space between items */
   }
 
    .p_abstract_p {
