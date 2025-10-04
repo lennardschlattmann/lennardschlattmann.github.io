@@ -225,6 +225,7 @@ body.dark-theme .card.info {
   /* INFO COLUMNS */
   .info-columns {
     flex-direction: column !important; /* stack columns vertically */
+    text-align: left;  /* left-align text globally on mobile */
     gap: 10px;
   }
 
