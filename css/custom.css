@@ -245,4 +245,18 @@ body.dark-theme .card.info {
     font-size: 0.85rem; /* smaller list items */
     text-align: left;
   }
+
+  .col-12.text-center.text-lg-start {
+    text-align: left !important;
+  }
+
+  .col-12.text-center.text-lg-start h3,
+  .col-12.text-center.text-lg-start p {
+    text-align: left !important;
+    font-size: 0.85rem; /* optional smaller font */
+  }
+
+  .col-12.text-center.text-lg-start .disclaimer {
+    font-size: 0.75rem; /* even smaller for disclaimer */
+  }
 }
