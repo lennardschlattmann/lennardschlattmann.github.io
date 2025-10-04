@@ -1,6 +1,7 @@
 /*!
  * Custom CSS for Lennard Schlattmann
  * Cleaned and optimized for Bootstrap 5
+ * Layout: Research Interests + Education always side-by-side
  */
 
 /* =========================
@@ -59,7 +60,7 @@ a:hover {
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
-/* Ensure consistent preformat text */
+/* Preformatted text */
 pre {
   background-color: #fff;
   border: 1px solid #fff;
@@ -153,25 +154,17 @@ img.round-photo {
    ========================= */
 .info-columns {
   display: flex;
-  flex-direction: column; /* stacked on mobile */
-  gap: 30px;
+  flex-direction: row;          /* always side-by-side */
+  flex-wrap: wrap;              /* wrap on very small screens */
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-@media (min-width: 992px) {
-  .info-columns {
-    flex-direction: row; /* side-by-side on desktop */
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-
-  .info-columns .column,
-  .info-columns .education-column {
-    flex: 1;
-  }
-
-  .info-columns .column {
-    margin-right: 40px; /* space between the two columns */
-  }
+.info-columns .column,
+.info-columns .education-column {
+  flex: 1 1 45%;                /* each takes ~half width */
+  min-width: 250px;             /* prevent too narrow on very small screens */
 }
 
 .info-columns h2 {
