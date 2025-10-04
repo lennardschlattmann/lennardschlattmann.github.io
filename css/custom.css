@@ -234,10 +234,14 @@ body.dark-theme .card.info {
    SHIFTED SECTIONS BELOW HEADER
    ========================= */
 .shifted-sections {
-  margin-left: 100px;
+  margin-left: 50px;
 }
 
 @media (max-width: 768px) {
+
+  .shifted-sections {
+  margin-left: 50px;
+  }
 
   /* Stack info columns vertically on tablets/small screens */
   .info-columns {
