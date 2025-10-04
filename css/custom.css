@@ -258,6 +258,6 @@ body.dark-theme .card.info {
 
   .col-12.text-center.text-lg-start .disclaimer {
     font-size: 0.75rem; /* even smaller for disclaimer */
-    text-align: left;
+    text-align: justify;
   }
 }
