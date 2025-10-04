@@ -154,19 +154,17 @@ a:hover {
 
 /* Icon list: full width + centered */
 .network-icon {
-  display: flex;
-  justify-content: center; /* centers icons horizontally */
-  align-items: center;
-  gap: 25px; /* equal space between icons */
-  width: 100%; /* make sure it spans the photo width */
+  margin-top: 10px;      /* push icons a bit lower */
+  display: flex;          /* make them flex for easier spacing */
+  justify-content: center; /* center horizontally */
+  gap: 10px;             /* smaller spacing between icons */
+  list-style: none;       /* remove bullets if any */
   padding: 0;
-  margin: 200px 0 0 -60px; /* top margin only */
-  list-style: none;
-  transform: translateY(-30px); /* moves up 10px */
+  margin: 0 0 10px -60px; /* top margin only */
 }
 
-/* Icons themselves */
-.social-icon {
+.network-icon li {
+  display: inline-block;
   font-size: 26px;
 }
 
@@ -203,7 +201,7 @@ a:hover {
 .education-column h2 {
   margin-top: 20px; /* aligns icon vertically */
   color: white; /* soft blue-grey title */
-  margin-left: -320px; /* adjust value as needed */
+  margin-left: -220px; /* adjust value as needed */
 }
 
 .info-columns h2 {
@@ -214,19 +212,19 @@ a:hover {
 .education-list {
   list-style: none;
   padding: 0;
-  margin-left: -170px; /* adjust value as needed */
+  margin-left: -120px; /* adjust value as needed */
 }
 
 .education-list li {
   display: flex;
   align-items: flex-start;
-  margin-left: -170px; /* adjust value as needed */
+  margin-left: -120px; /* adjust value as needed */
   margin-top: 4px; /* aligns icon vertically */
 }
 
 .education-list i {
   color: #ffffff;
-  margin-left: -170px; /* adjust value as needed */
+  margin-left: -120px; /* adjust value as needed */
   margin-right: 6px;
   margin-top: 4px; /* aligns icon vertically */
 }
