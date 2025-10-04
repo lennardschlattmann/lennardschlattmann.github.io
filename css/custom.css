@@ -377,3 +377,88 @@ body.dark-theme .card.info {
 .p_abstract_p a {
   margin-bottom: 0 !important; /* remove default link spacing */
 }
+
+.p_abstract_p .media-label {
+  font-size: 0.8rem !important;
+}
+
+/* ======================================
+   TEACHING SECTION LAYOUT
+   ====================================== */
+.teaching-pair {
+  display: flex;
+  flex-direction: column; /* default (mobile) = stacked */
+  gap: 20px;
+}
+
+.teaching-item {
+  flex: 1 1 48%;
+}
+
+/* Desktop: show A & B side by side */
+@media (min-width: 992px) {
+  .teaching-pair {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .teaching-item {
+    flex: 1 1 48%;
+  }
+}
+
+/* ======================================
+   Section titles + content side-by-side
+   ====================================== */
+.section-pair {
+  display: flex;
+  flex-direction: column; /* default: stacked for mobile */
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.section-pair h4.section {
+  flex: 0 0 auto;
+  margin-bottom: 0;
+}
+
+.section-pair .section-content {
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+/* Desktop layout: side-by-side */
+@media (min-width: 992px) {
+  .section-pair {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 60px;
+  }
+
+  .section-pair h4.section {
+    flex: 0 0 220px;
+    margin-top: 5px;
+    text-align: left;
+  }
+
+  .section-pair .section-content {
+    flex: 1;
+  }
+}
+
+/* Optional: tighter spacing for links */
+.p_abstract_p a {
+  margin-right: 8px;
+  line-height: 1.2;
+}
+
+/* "Media coverage" label */
+.media-label {
+  margin-top: -5px;
+  margin-bottom: 5px;
+  display: block;
+  font-size: 0.9rem;
+}
