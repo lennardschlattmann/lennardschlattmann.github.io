@@ -306,14 +306,13 @@ body.dark-theme .card.info {
 
    /* Reduce space above Education heading */
   .info-columns .education-column h2 {
-    margin-top: 0.25rem !important; /* smaller top margin for mobile */
+    margin-top: 0.75rem !important; /* smaller top margin for mobile */
   }
 
   /* Add space below the last education item */
   .info-columns .education-column .education-list {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem; /* space between items */
     margin-bottom: 1.5rem !important; /* space after the list */
   }
 
