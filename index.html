@@ -27,6 +27,39 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles_navbar.css" />
   <link rel="stylesheet" href="css/custom.css" />
+
+  <style>
+    /* Responsive tweaks for info columns */
+    .info-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .column, .education-column {
+      flex: 1 1 100%; /* full width on small screens */
+    }
+
+    @media (min-width: 768px) {
+      .column, .education-column {
+        flex: 1;
+      }
+    }
+
+    /* Abstract boxes full width on mobile */
+    .collapse.card.info {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    /* Optional: smaller abstract links on mobile */
+    @media (max-width: 576px) {
+      .p_abstract_p a {
+        display: block;
+        margin-bottom: 5px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -37,13 +70,13 @@
       <div class="row w-100 align-items-center">
 
         <!-- LEFT: Brand -->
-        <div class="col-lg-4 d-flex align-items-center">
-          <a class="navbar-brand" href="#page-top" style="margin-left: 45px;">Lennard Schlattmann</a>
+        <div class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start mb-2 mb-md-0">
+          <a class="navbar-brand ml-md-4" href="#page-top">Lennard Schlattmann</a>
         </div>
 
         <!-- CENTER: Nav Links -->
-        <div class="col-lg-6">
-          <ul class="navbar-nav d-flex justify-content-start">
+        <div class="col-12 col-md-6 mb-2 mb-md-0">
+          <ul class="navbar-nav d-flex justify-content-center justify-content-md-start flex-wrap">
             <li class="nav-item"><a class="nav-link" href="#Working Papers">Working Papers</a></li>
             <li class="nav-item"><a class="nav-link" href="#Work in Progress">Work in Progress</a></li>
             <li class="nav-item"><a class="nav-link" href="#Teaching">Teaching</a></li>
@@ -52,7 +85,7 @@
         </div>
 
         <!-- RIGHT: Theme Toggle -->
-        <div class="col-lg-2 d-flex justify-content-end">
+        <div class="col-12 col-md-2 d-flex justify-content-center justify-content-md-end">
           <ul class="navbar-nav">
             <li class="nav-item dropdown theme-dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="themeToggle" role="button" data-toggle="dropdown"
@@ -77,8 +110,8 @@
       <div class="row align-items-center">
 
         <!-- LEFT COLUMN: Photo + Info -->
-        <div class="col-lg-4 text-center">
-          <img src="images/photo.jpg" alt="Lennard Schlattmann" class="round-photo mb-3" />
+        <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
+          <img src="images/photo.jpg" alt="Lennard Schlattmann" class="round-photo img-fluid mb-3" />
           <div class="portrait-title mb-3">
             <h3>Lennard Schlattmann</h3>
             <h5>Climate Research Economist</h5>
@@ -86,7 +119,7 @@
           </div>
 
           <!-- Social Icons -->
-          <ul class="network-icon mt-4" aria-hidden="true">
+          <ul class="network-icon mt-4 d-flex justify-content-center justify-content-md-start" aria-hidden="true">
             <li><a href="mailto:l.schlattmann@dnb.nl"><i class="fas fa-envelope social-icon"></i></a></li>
             <li><a href="https://scholar.google.com/citations?hl=en&user=92xWQUcAAAAJ" target="_blank"><i class="fas fa-graduation-cap social-icon"></i></a></li>
             <li><a href="https://github.com/lennardschlattmann" target="_blank"><i class="fab fa-github social-icon"></i></a></li>
@@ -95,7 +128,7 @@
         </div>
 
         <!-- RIGHT COLUMN: Text -->
-        <div class="col-lg-8 text-start">
+        <div class="col-12 col-md-8 text-start">
           <h3>Welcome!</h3>
           <p>I am a Climate Research Economist at <a href="https://www.dnb.nl/en/" target="_blank">De Nederlandsche Bank</a>. My research interests include quantitative macroeconomics, climate policies, and public economics. I received my PhD in Economics at the <a href="https://www.econ.uni-bonn.de/en?set_language=en" target="_blank">University of Bonn</a>. Before the PhD, I obtained a Bachelor's and Master's degree in Economics at the <a href="https://www.vwl.uni-mannheim.de/en/" target="_blank">University of Mannheim</a>.</p>
           <p class="mt-3 small disclaimer">Note: This is my personal webpage and the views expressed here do not necessarily reflect the official position of De Nederlandsche Bank or the Eurosystem.</p>
@@ -126,239 +159,136 @@
     </div>
   </header>
 
-
 <div class="shifted-sections">
-      <!-- SECTION WORK IN PROGRESS -->
-      <section id="Working Papers">
-        <hr class="my-2" />
-        <div class="row">
-          <div class="col-md">
-            <h4 class="section">Working Papers</h4>
-            <p class="p_title_p">
-              <b> Spatial Redistribution of Carbon Taxes </b> 
-              <p class="p_abstract_p">
-                <a class="collapse-show showAbstract" data-toggle="collapse" href="#abstract_spatial" role="button"
-                  aria-expanded="false" aria-controls="collapse-ImpEmp">
-                  abstract
-                </a>
-                  |
-                  <a href="papers/schlattmann_jmp.pdf" role="button" target="_blank">
-                    current version <span class="fa fa-file-pdf-o"></span>
-                  </a>
-                  |
-                  <a href="https://www.econtribute.de/RePEc/ajk/ajkdps/ECONtribute_345_2024.pdf" role="button" target="_blank">
-                    Econtribute Discussion Paper <span class="n_link"></span>
-                  </a>
-                </a>
-              </p>
-              <div class="px-4 collapse card info" id="abstract_spatial">
-                <p class="text-justify">
-                  Policies to mitigate climate change are high on the political agenda and their distributional
-                  consequences are actively discussed. This paper makes two contributions
-                  to this discussion. First, it empirically identifies the spatial dimension between
-                  rural and urban households as important for the distributional consequences of
-                  carbon taxes, because the average annual carbon footprint of rural households in
-                  Germany is 2.2 tons higher than that of urban households, around 12 percent
-                  of the average carbon footprint. Second, it builds a quantitative spatial general
-                  equilibrium model to evaluate different policies of recycling carbon tax revenues
-                  in terms of their redistributive effects and their political support along the transition
-                  to clean technologies. I find that recycling carbon tax revenues as lump-sum
-                  transfers redistributes from rural to urban households. For a carbon tax of 300
-                  Euros per ton, the difference in the present value of net transfers is 8,000 Euros. In
-                  contrast, place-based transfers avoid this spatial redistribution without reducing
-                  the speed of the transition to clean technologies. This has important implications
-                  for the political support for these policies, as place-based transfers allow to set
-                  a higher carbon tax under the constraint that the policy is beneficial to a majority
-                  of households in both regions. Finally, carbon taxes have sizeable general
-                  equilibrium effects on housing prices, increasing those of non-emitting houses by 5
-                  percent, while decreasing those of carbon emitting houses by the same amount.
-                </p>
-              </div>
-            </p>
-            <p class="p_title_p">
-              <b> Distributional Consequences of Climate Policies  </b> | with
-              <a href="https://sites.google.com/site/kuhnecon/home" class="n_link" role="button" target="_blank">Moritz Kuhn</a>
-            </p >
-            <font size="-1"> revise & resubmit, <b> American Economic Journal: Macroeconomics </b> </font>
-              </p>
-              <p class="p_abstract_p">
-                <a class="collapse-show showAbstract" data-toggle="collapse" href="#abstract_cc" role="button"
-                  aria-expanded="false" aria-controls="collapse-ImpEmp">
-                  abstract
-                </a>
-                |
-                <a href="papers/Distributional_Consequences_of_Climate_Policies.pdf" role="button" target="_blank">
-                  current version <span class="fa fa-file-pdf-o"></span>
-                </a>
-                |
-                <a href="https://cepr.org/publications/dp18893" role="button" target="_blank">
-                  CEPR Discussion Paper <span class="n_link"></span>
-                </a>
-                |
-                <a> Media coverage: 
-                </a> 
-                </a>
-                <a href="https://zeitung.faz.net/fas/wirtschaft/2024-01-21/36ea3bdbc242b174aeb6f7b6dc0d31ea/?GEPC=s5" 
-                class="n_link" role="button" target="_blank"> Frankfurter Allgemeine Zeitung,
-              </a>
-              <a href="https://www.zeit.de/wissen/umwelt/2024-01/klimapolitik-subventionen-verbote-studie" 
-              class="n_link" role="button" target="_blank"> Die Zeit,
-              </a>
-                <a href="https://cepr.org/voxeu/columns/carbon-reduction-and-social-justice-challenge-economic-policy" 
-                class="n_link" role="button" target="_blank"> VoxEU column
-              </a> 
-                </a>
-              </p>
-              <div class="px-4 collapse card info" id="abstract_cc">
-                <p class="text-justify">
-        
-                  Policies to support the transition to a carbon-neutral economy are high on the policy agenda.
-                  Their effectiveness in reducing carbon emissions and their distributional consequences are actively
-                  debated. One key reason for the ongoing debate is that quantitative answers regarding the
-                  reduction-redistribution trade-offs of such policies remain limited. Looking at the emissions
-                  of household consumption, this paper makes two contributions to the discussion. First, we
-                  empirically show that infrequently adjusted consumption goods, i.e. consumption commitment
-                  goods such as cars or heating systems, together with their complementary consumption (gas,
-                  oil), account for more than 35 percent of household carbon emissions. Second, we develop a
-                  quantitative life-cycle model with heterogeneous adoption rates of carbon-neutral commitment
-                  goods by income to quantify the reduction-redistribution trade-off of different policy mixes. Our
-                  results for the reduction-redistribution trade-off show that a percentage subsidy for carbon neutral
-                  consumption effectively reduces emissions by targeting high-income households. If the
-                  subsidy is financed by a progressive income tax, it yields a policy mix that leads to rapid emission
-                  reductions and a majority of households supporting its distributional effects.
-                </p>
-              </div>
-            </p>
-            <p class="p_title_p">
-              <b> Regional Labor Demand, Occupational Persistence and Social Mobility in Germany </b>
-            </p>
-            <p class="p_abstract_p">
-              <a class="collapse-show showAbstract" data-toggle="collapse" href="#abstract_occ_pers" role="button"
-                aria-expanded="false" aria-controls="collapse-ImpEmp">
-                abstract
-              </a>
-              |
-              <a href="papers/paper_occ_pers.pdf" role="button" target="_blank">
-                current version <span class="fa fa-file-pdf-o"></span>
-              </a>
-            </p>
-            <div class="px-4 collapse card info" id="abstract_occ_pers">
-              <p class="text-justify">
-                Intergenerational persistence in occupational choice is one of the main drivers of
-                income persistence and thus a key determinant of social mobility. In studying
-                this phenomenon, the existing literature has focused exclusively on supply-side
-                mechanisms by assuming that children can freely choose which occupation
-                to work in. This paper, however, quantifies the importance of regional labor
-                demand by merging regional and occupation-specific vacancy shares covering
-                400 regions and 436 occupations with the German Socioeconomic Panel. The
-                main result indicates that controlling for labor demand reduces occupational
-                persistence by up to 10 percent, the same magnitude as controlling for children's
-                education does. Furthermore, I find that the degree of occupational persistence
-                is relatively homogeneous across parent-child combinations. A child is about
-                20 times more likely to work in a given occupation if the parent works in
-                that occupation. Finally, children who follow into their parent's occupation
-                experience an initial wage premium of about 6 percent and their annual
-                unemployment risk is halved.
-              </p>
-            </div>
+
+  <!-- SECTION WORKING PAPERS -->
+  <section id="Working Papers">
+    <hr class="my-2" />
+    <div class="row">
+      <div class="col-12">
+        <h4 class="section">Working Papers</h4>
+
+        <!-- Paper 1 -->
+        <p class="p_title_p"><b>Spatial Redistribution of Carbon Taxes</b></p>
+        <p class="p_abstract_p">
+          <a class="collapse-show showAbstract" data-toggle="collapse" href="#abstract_spatial" role="button" aria-expanded="false" aria-controls="collapse-ImpEmp">abstract</a>
+          <a href="papers/schlattmann_jmp.pdf" target="_blank">current version <span class="fa fa-file-pdf-o"></span></a>
+          <a href="https://www.econtribute.de/RePEc/ajk/ajkdps/ECONtribute_345_2024.pdf" target="_blank">Econtribute Discussion Paper</a>
+        </p>
+        <div class="collapse card info px-2" id="abstract_spatial">
+          <p class="text-justify">
+            Policies to mitigate climate change are high on the political agenda and their distributional consequences are actively discussed. This paper makes two contributions to this discussion. First, it empirically identifies the spatial dimension between rural and urban households as important for the distributional consequences of carbon taxes, because the average annual carbon footprint of rural households in Germany is 2.2 tons higher than that of urban households, around 12 percent of the average carbon footprint. Second, it builds a quantitative spatial general equilibrium model to evaluate different policies of recycling carbon tax revenues in terms of their redistributive effects and their political support along the transition to clean technologies. I find that recycling carbon tax revenues as lump-sum transfers redistributes from rural to urban households. For a carbon tax of 300 Euros per ton, the difference in the present value of net transfers is 8,000 Euros. In contrast, place-based transfers avoid this spatial redistribution without reducing the speed of the transition to clean technologies. This has important implications for the political support for these policies, as place-based transfers allow to set a higher carbon tax under the constraint that the policy is beneficial to a majority of households in both regions. Finally, carbon taxes have sizeable general equilibrium effects on housing prices, increasing those of non-emitting houses by 5 percent, while decreasing those of carbon emitting houses by the same amount.
           </p>
-          </div>
         </div>
-      </section>
 
-      <section id="Work in Progress">
-        <hr class="my-3" />
-          <div class="row">
-            <div class="col-md">
-            <h4 class="section">Work in Progress</h4>
-            <p class="p_title_p">
-              <b> Spatial Structural Change and Labor Mobility 
-              </b> | with
-              <a href="https://sites.google.com/site/georgduernecker/home" class="n_link" role="button" target="_blank">Georg Duernecker
-              </a>
-            </p >
-            <p class="p_abstract_p">
-              <a href="papers/abstract_spatial_structural_change.pdf" role="button" target="_blank">
-                abstract <span class="fa fa-file-pdf-o"></span>
-              </a>
-            </p>
-            <p class="p_title_p">
-              <b> Distributional Effects of Climate Policies along the Liquid Wealth Distribution 
-              </b> 
-            </p >
-            <p class="p_abstract_p">
-              <a href="papers/abstract_climate_wealth_distribution.pdf" role="button" target="_blank">
-                abstract <span class="fa fa-file-pdf-o"></span>
-              </a>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="Teaching">
-        <hr class="my-3" />
-          <div class="row">
-            <div class="col-md">
-            <h4 class="section">Teaching</h4>
-            <p class="p_title_p">
-              <b> Macroeconomics B </b> | with 
-              <a href="https://wiwi.uni-bonn.de/hintermaier/" class="n_link" role="button" target="_blank">Thomas Hintermaier</a>
-            </p >
-            Teaching assistant: 2021 (no evaluation), 
-                                2022 (<a href="evaluations/schlattmann_eval_ta_spring_2022.pdf" role="button" target="_blank">evaluation</a>), 
-                                2023 (<a href="evaluations/schlattmann_eval_ta_spring_2023.pdf" role="button" target="_blank">evaluation</a>)
-            <p >
-            </p >
-            <b> Macroeconomics A </b> | with 
-            <a href="https://sites.google.com/site/kuhnecon/home" class="n_link" role="button" target="_blank">Moritz Kuhn</a>
-          </p >
-          Teaching assistant: 2021 (no evaluation), 
-                              2022 (<a href="evaluations/schlattmann_eval_ta_fall_2022.pdf" role="button" target="_blank">evaluation</a>,
-                                    <a href="evaluations/schlattmann_best_tutor_award.pdf" role="button" target="_blank"> best tutor award</a>)
+        <!-- Paper 2 -->
+        <p class="p_title_p"><b>Distributional Consequences of Climate Policies</b> | with <a href="https://sites.google.com/site/kuhnecon/home" target="_blank">Moritz Kuhn</a></p>
+        <p class="small"><i>revise & resubmit, American Economic Journal: Macroeconomics</i></p>
+        <p class="p_abstract_p">
+          <a class="collapse-show showAbstract" data-toggle="collapse" href="#abstract_cc" role="button" aria-expanded="false">abstract</a>
+          <a href="papers/Distributional_Consequences_of_Climate_Policies.pdf" target="_blank">current version <span class="fa fa-file-pdf-o"></span></a>
+          <a href="https://cepr.org/publications/dp18893" target="_blank">CEPR Discussion Paper</a>
+          <span>Media coverage:</span>
+          <a href="https://zeitung.faz.net/fas/wirtschaft/2024-01-21/36ea3bdbc242b174aeb6f7b6dc0d31ea/?GEPC=s5" target="_blank">FAZ</a>
+          <a href="https://www.zeit.de/wissen/umwelt/2024-01/klimapolitik-subventionen-verbote-studie" target="_blank">Die Zeit</a>
+          <a href="https://cepr.org/voxeu/columns/carbon-reduction-and-social-justice-challenge-economic-policy" target="_blank">VoxEU</a>
+        </p>
+        <div class="collapse card info px-2" id="abstract_cc">
+          <p class="text-justify">
+            Policies to support the transition to a carbon-neutral economy are high on the policy agenda. Their effectiveness in reducing carbon emissions and their distributional consequences are actively debated. One key reason for the ongoing debate is that quantitative answers regarding the reduction-redistribution trade-offs of such policies remain limited. Looking at the emissions of household consumption, this paper makes two contributions to the discussion. First, we empirically show that infrequently adjusted consumption goods, i.e. consumption commitment goods such as cars or heating systems, together with their complementary consumption (gas, oil), account for more than 35 percent of household carbon emissions. Second, we develop a quantitative life-cycle model with heterogeneous adoption rates of carbon-neutral commitment goods by income to quantify the reduction-redistribution trade-off of different policy mixes. Our results for the reduction-redistribution trade-off show that a percentage subsidy for carbon neutral consumption effectively reduces emissions by targeting high-income households. If the subsidy is financed by a progressive income tax, it yields a policy mix that leads to rapid emission reductions and a majority of households supporting its distributional effects.
           </p>
-          </div>
         </div>
-      </section>
 
-      <br />
-      <br />
+        <!-- Paper 3 -->
+        <p class="p_title_p"><b>Regional Labor Demand, Occupational Persistence and Social Mobility in Germany</b></p>
+        <p class="p_abstract_p">
+          <a class="collapse-show showAbstract" data-toggle="collapse" href="#abstract_occ_pers" role="button" aria-expanded="false">abstract</a>
+          <a href="papers/paper_occ_pers.pdf" target="_blank">current version <span class="fa fa-file-pdf-o"></span></a>
+        </p>
+        <div class="collapse card info px-2" id="abstract_occ_pers">
+          <p class="text-justify">
+            Intergenerational persistence in occupational choice is one of the main drivers of income persistence and thus a key determinant of social mobility. In studying this phenomenon, the existing literature has focused exclusively on supply-side mechanisms by assuming that children can freely choose which occupation to work in. This paper, however, quantifies the importance of regional labor demand by merging regional and occupation-specific vacancy shares covering 400 regions and 436 occupations with the German Socioeconomic Panel. The main result indicates that controlling for labor demand reduces occupational persistence by up to 10 percent, the same magnitude as controlling for children's education does. Furthermore, I find that the degree of occupational persistence is relatively homogeneous across parent-child combinations. A child is about 20 times more likely to work in a given occupation if the parent works in that occupation. Finally, children who follow into their parent's occupation experience an initial wage premium of about 6 percent and their annual unemployment risk is halved.
+          </p>
+        </div>
+      </div>
     </div>
-    <footer class="py-3 bg-dark">
-      <div class="container px-4">
-        <p class="m-0 text-center text-white">
-          Lennard Schlattmann - De Nederlandsche Bank | Last updated: October
-          2025.
+  </section>
+
+  <!-- SECTION WORK IN PROGRESS -->
+  <section id="Work in Progress">
+    <hr class="my-3" />
+    <div class="row">
+      <div class="col-12">
+        <h4 class="section">Work in Progress</h4>
+
+        <p class="p_title_p"><b>Spatial Structural Change and Labor Mobility</b> | with <a href="https://sites.google.com/site/georgduernecker/home" target="_blank">Georg Duernecker</a></p>
+        <p class="p_abstract_p">
+          <a href="papers/abstract_spatial_structural_change.pdf" target="_blank">abstract <span class="fa fa-file-pdf-o"></span></a>
+        </p>
+
+        <p class="p_title_p"><b>Distributional Effects of Climate Policies along the Liquid Wealth Distribution</b></p>
+        <p class="p_abstract_p">
+          <a href="papers/abstract_climate_wealth_distribution.pdf" target="_blank">abstract <span class="fa fa-file-pdf-o"></span></a>
         </p>
       </div>
-    </footer>
+    </div>
+  </section>
+
+</div>
+
+<!-- SECTION TEACHING -->
+<section id="Teaching">
+  <hr class="my-3" />
+  <div class="row">
+    <div class="col-12">
+      <h4 class="section">Teaching</h4>
+
+      <!-- Macroeconomics B -->
+      <p class="p_title_p">
+        <b>Macroeconomics B</b> | with <a href="https://wiwi.uni-bonn.de/hintermaier/" target="_blank">Thomas Hintermaier</a>
+      </p>
+      <p>
+        Teaching assistant:
+        <ul class="small">
+          <li>2021 (no evaluation)</li>
+          <li>2022 (<a href="evaluations/schlattmann_eval_ta_spring_2022.pdf" target="_blank">evaluation</a>)</li>
+          <li>2023 (<a href="evaluations/schlattmann_eval_ta_spring_2023.pdf" target="_blank">evaluation</a>)</li>
+        </ul>
+      </p>
+
+      <!-- Macroeconomics A -->
+      <p class="p_title_p">
+        <b>Macroeconomics A</b> | with <a href="https://sites.google.com/site/kuhnecon/home" target="_blank">Moritz Kuhn</a>
+      </p>
+      <p>
+        Teaching assistant:
+        <ul class="small">
+          <li>2021 (no evaluation)</li>
+          <li>2022 (
+            <a href="evaluations/schlattmann_eval_ta_fall_2022.pdf" target="_blank">evaluation</a>, 
+            <a href="evaluations/schlattmann_best_tutor_award.pdf" target="_blank">best tutor award</a>
+          )</li>
+        </ul>
+      </p>
+    </div>
   </div>
+</section>
 
-
-<!-- to have beautiful moon symbol -->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Light/Dark Mode Toggle</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for moon icon -->
-    <link rel="stylesheet" href="css/custom.css"> <!-- Link to your CSS file -->
-</head>
-<body>
-
+  <!-- FOOTER -->
+  <footer class="py-3 bg-dark">
+    <div class="container px-4">
+      <p class="m-0 text-center text-white">
+        Lennard Schlattmann - De Nederlandsche Bank | Last updated: October 2025.
+      </p>
+    </div>
+  </footer>
 
   <!-- JS scripts -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <!-- Bootstrap core JS-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Core navbar theme JS-->
   <script src="js/scripts.js"></script>
 </body>
-</div>
+
 </html>
