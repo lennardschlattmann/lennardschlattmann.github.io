@@ -365,3 +365,15 @@ body.dark-theme .card.info {
     margin-left: -40px; /* shift slightly to the left */
   }
 }
+
+.p_abstract_p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px !important;        /* smaller gap between wrapped items */
+  row-gap: 2px !important;    /* reduce vertical spacing between lines */
+  line-height: 1.2 !important; /* tighten the line height */
+}
+
+.p_abstract_p a {
+  margin-bottom: 0 !important; /* remove default link spacing */
+}
