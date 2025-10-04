@@ -96,8 +96,10 @@ img.round-photo {
 }
 
 .welcome-text p {
+  text-align: justify;
   margin-bottom: 10px;
 }
+
 
 .welcome-text .disclaimer {
   font-size: 0.9rem;
@@ -279,13 +281,17 @@ body.dark-theme .card.info {
     text-align: left;
   }
 
+  .desktop-inline {
+    display: block;
+  }
+
   /* Welcome text adjustments */
   .welcome-text {
     font-size: 0.85rem;
     text-align: justify;
   }
 
-.mobile-break {
+  .mobile-break {
     display: block;      /* forces line break on mobile */
     margin-top: 0.5rem;  /* optional spacing */
   }
