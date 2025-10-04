@@ -313,20 +313,23 @@ body.dark-theme .card.info {
   .info-columns .education-column .education-list {
     display: flex;
     flex-direction: column;
-    gap: 0.0rem; /* smaller positive space between items */
+    gap: 0.1rem; /* smaller positive space between items */
     margin-bottom: 1.5rem !important; /* space after the list */
   }
 
   /* Each education item should appear on a single line */
   .info-columns .education-column .education-list li {
     white-space: normal; /* allow line wrapping if needed */
-    gap: 0.0rem; /* smaller space between items */
+    gap: 0.1rem; /* smaller space between items */
   }
 
    .p_abstract_p {
     font-size: 0.85rem;
   }
-
+.education-list span {
+  color: #a0a7b3;
+  font-size: 0.75rem;
+}
 
 }
 
