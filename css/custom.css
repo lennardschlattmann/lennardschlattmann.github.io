@@ -104,8 +104,7 @@ img.round-photo {
 }
 
 .mobile-break {
-  display: inline; /* desktop default */
-  text-align: justify;
+  display: inline; /* default for desktop */
 }
 
 
@@ -286,10 +285,9 @@ body.dark-theme .card.info {
     text-align: justify;
   }
 
-  .mobile-break {
+.mobile-break {
     display: block;      /* forces line break on mobile */
     margin-top: 0.5rem;  /* optional spacing */
-    text-align: justify;
   }
 
   .welcome-text .disclaimer {
@@ -363,4 +361,10 @@ body.dark-theme .card.info {
   .info-columns .education-column {
     margin-left: -20px; /* shift slightly to the left */
   }
+}
+
+/* Remove the pseudo-element and white-space override */
+.welcome-text {
+  text-align: justify;
+  font-size: 0.85rem;
 }
