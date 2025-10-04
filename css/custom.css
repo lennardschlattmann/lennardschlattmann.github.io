@@ -328,8 +328,7 @@ body.dark-theme .card.info {
   }
 
   .education-list span {
-    color: red;
-    font-size: 0.75rem;
+    font-size: 0.75rem !important;
   }
 
 }
