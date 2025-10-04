@@ -201,7 +201,7 @@ body.dark-theme .card.info {
 }
 
 .interest-list li {
-  margin-bottom: 6px;
+  margin-bottom: 3px;
   line-height: 1.5;
   text-align: left;
 }
@@ -214,11 +214,16 @@ body.dark-theme .card.info {
 
 .education-list li {
   display: flex;
-  align-items: flex-start;
+  align-items: center; /* center vertically */
   gap: 8px;
-  margin-bottom: 6px;
-  line-height: 1.5;
+  white-space: nowrap; /* prevent line breaks */
 }
+
+.education-list span {
+  color: #a0a7b3;
+  font-size: 0.9rem;
+}
+
 
 .education-list i {
   margin-top: 3px;
@@ -287,5 +292,12 @@ body.dark-theme .card.info {
   .interest-list li,
   .education-list li {
     font-size: 0.8rem;
+  }
+}
+
+/* Desktop-only adjustment: shift Education column to the left */
+@media (min-width: 992px) { /* large screens */
+  .info-columns .education-column {
+    margin-left: -20px; /* shift slightly to the left */
   }
 }
