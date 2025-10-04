@@ -343,6 +343,16 @@ body.dark-theme .card.info {
     font-size: 0.75rem !important;
   }
 
+  .welcome-text {
+    /* Use a pseudo-element after the first sentence */
+    white-space: pre-line;
+  }
+
+  .welcome-text::after {
+    content: "\A"; /* \A is a newline */
+    display: block;
+  }
+
 }
 
 /* Desktop-only adjustment: shift Education column to the left */
