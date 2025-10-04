@@ -264,11 +264,12 @@ body.dark-theme .card.info {
   .welcome-text {
     font-size: 0.85rem; /* smaller font for mobile */
   }
-  /* Justify Welcome section text */
-  .welcome-text {
-    text-align: justify;  /* justify all text */
-  }
+
   .welcome-text .disclaimer {
     font-size: 0.75rem; /* even smaller for disclaimer */
   }
 }
+  /* Justify Welcome section text */
+  .welcome-text {
+    text-align: justify;  /* justify all text */
+  }
