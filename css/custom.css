@@ -306,12 +306,12 @@ body.dark-theme .card.info {
 
   /* Reduce space above Education heading */
   .education-column h2 {
-    margin-top: 0.5rem; /* smaller than default */
+    margin-top: -1rem; /* smaller than default */
   }
 
   /* Add space below the last education item */
   .education-column .education-list li:last-child {
-    margin-bottom: 1rem; /* adds extra space after last item */
+    margin-bottom: 4rem; /* adds extra space after last item */
   }
 
    .p_abstract_p {
