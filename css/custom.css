@@ -233,16 +233,21 @@ body.dark-theme .card.info {
 /* =========================
    SHIFTED SECTIONS BELOW HEADER
    ========================= */
+/* Sections below header */
 .shifted-sections {
-  margin-left: 50px;
+  margin-left: 50px;   /* desktop left margin */
+  margin-right: 50px;  /* add right margin to prevent stretching */
 }
+
+
 
 @media (max-width: 768px) {
 
   .shifted-sections {
-  margin-left: 50px;
+    margin-left: 15px;  /* more readable on tablet/mobile */
+    margin-right: 15px; /* keep some right padding */
   }
-
+  
   /* Stack info columns vertically on tablets/small screens */
   .info-columns {
     flex-direction: column;
