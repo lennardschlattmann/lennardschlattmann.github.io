@@ -121,8 +121,12 @@ img.round-photo {
   margin-top: 5px;
 }
 
+/* Make abstract links row-aligned */
 .p_abstract_p {
-  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;       /* allow wrapping if too narrow */
+  gap: 10px;             /* space between links */
+  align-items: center;   /* vertical alignment */
 }
 
 /* Abstract card styling */
@@ -247,7 +251,7 @@ body.dark-theme .card.info {
     margin-left: 15px;  /* more readable on tablet/mobile */
     margin-right: 15px; /* keep some right padding */
   }
-  
+
   /* Stack info columns vertically on tablets/small screens */
   .info-columns {
     flex-direction: column;
@@ -298,6 +302,10 @@ body.dark-theme .card.info {
   .interest-list li,
   .education-list li {
     font-size: 0.8rem;
+  }
+
+   .p_abstract_p {
+    font-size: 0.85rem;
   }
 }
 
