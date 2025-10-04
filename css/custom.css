@@ -261,12 +261,6 @@ body.dark-theme .card.info {
     text-align: justify;
   }
   
-}
-
-
-
-/* Mobile adjustments */
-@media (max-width: 576px) {
   .welcome-text {
     font-size: 0.85rem; /* smaller font for mobile */
   }
