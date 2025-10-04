@@ -326,10 +326,11 @@ body.dark-theme .card.info {
    .p_abstract_p {
     font-size: 0.85rem;
   }
-.education-list span {
-  color: #a0a7b3;
-  font-size: 0.75rem;
-}
+
+  .education-list span {
+    color: red;
+    font-size: 0.75rem;
+  }
 
 }
 
