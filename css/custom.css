@@ -260,4 +260,21 @@ body.dark-theme .card.info {
     font-size: 0.75rem; /* even smaller for disclaimer */
     text-align: justify;
   }
+  
+}
+
+
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+  .welcome-text {
+    font-size: 0.85rem; /* smaller font for mobile */
+  }
+  /* Justify Welcome section text */
+  .welcome-text {
+    text-align: justify;  /* justify all text */
+  }
+  .welcome-text .disclaimer {
+    font-size: 0.75rem; /* even smaller for disclaimer */
+  }
 }
