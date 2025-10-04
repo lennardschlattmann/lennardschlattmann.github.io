@@ -238,9 +238,6 @@ body.dark-theme .card.info {
 }
 
 @media (max-width: 768px) {
-  .shifted-sections {
-    margin-left: 0;
-  }
 
   /* Stack info columns vertically on tablets/small screens */
   .info-columns {
