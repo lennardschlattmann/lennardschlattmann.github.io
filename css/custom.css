@@ -1,18 +1,21 @@
 /*!
  * Custom CSS for Lennard Schlattmann
- * Optimized for Bootstrap 5
- * Layout: Research Interests + Education always side-by-side
+ * Fixes: "Research Interests" + "Education" alignment (side-by-side on all screens)
  */
 
 /* =========================
    GENERAL BASE STYLES
    ========================= */
-html {
-  scroll-padding-top: 2rem;
+body {
+  background-color: #ffffff;
+  color: #000;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-header {
-  padding-top: 1.5rem;
+body.dark-theme {
+  background-color: #100e1cd7;
+  color: #ffffff;
 }
 
 b {
@@ -29,133 +32,23 @@ a:hover {
   color: darkorange;
 }
 
-.section_top {
-  margin-bottom: 0.2cm;
-  margin-top: 0cm;
-}
-
-.section {
-  margin-bottom: 0.35cm;
-  margin-top: 0.15cm;
-}
-
-/* Paragraph spacing for papers */
-.p_title_p {
-  margin-bottom: 7px;
-  margin-top: 5px;
-}
-
-.p_abstract_p {
-  margin-bottom: 20px;
-}
-
-/* Abstract box styling */
-.info {
-  padding: 15px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-}
-
-.card:hover {
-  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-}
-
-/* =========================
-   LIGHT/DARK THEMES
-   ========================= */
-body {
-  background-color: #ffffff;
-  color: #000000;
-  font-family: Arial, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-body.light-theme {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-body.dark-theme {
-  background-color: #100e1cd7;
-  color: #ffffff;
-}
-
-/* =========================
-   THEME DROPDOWN
-   ========================= */
-.theme-dropdown .dropdown-menu {
-  min-width: 100px;
-  padding: 0.25rem 0;
-  font-size: 0.85rem;
-}
-
-.theme-dropdown .dropdown-item {
-  color: #ffa600;
-  padding: 0.25rem 0.75rem;
-  font-size: 0.85rem;
-  line-height: 1.2;
-  transition: color 0.3s ease;
-}
-
-.theme-dropdown .dropdown-item:hover {
-  color: #ffa500;
-}
-
-/* =========================
-   IMAGE + TITLE SECTION
-   ========================= */
-img.round-photo {
-  border-radius: 10%;
-  object-fit: cover;
-  width: 250px;
-  height: 250px;
-  border: 2px solid #fff;
-  display: block;
-  margin: 0 auto 15px auto;
-}
-
-.portrait-title {
-  text-align: center;
-}
-
-/* =========================
-   SOCIAL ICONS
-   ========================= */
-.network-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-top: 20px;
-  list-style: none;
-  padding: 0;
-}
-
-.social-icon {
-  font-size: 22px;
-  transition: color 0.3s ease;
-}
-
-.social-icon:hover {
-  color: orange;
-}
-
 /* =========================
    INFO COLUMNS (Research + Education)
    ========================= */
 .info-columns {
-  display: flex;
-  flex-direction: row;          /* always side-by-side */
-  flex-wrap: nowrap;            /* prevent vertical stacking */
-  align-items: flex-start;
+  display: flex !important;             /* override Bootstrap’s .flex-column on mobile */
+  flex-direction: row !important;       /* always side-by-side */
+  flex-wrap: nowrap;                    /* prevent wrapping */
   justify-content: space-between;
+  align-items: flex-start;
   gap: 20px;
-  overflow-x: auto;             /* allow horizontal scroll if too narrow */
-  text-align: left;             /* left-aligned by default */
+  text-align: left;                     /* left-aligned text by default */
+  overflow-x: auto;                     /* allows horizontal scroll if very narrow */
 }
 
 .info-columns .column,
 .info-columns .education-column {
-  flex: 0 0 48%;
+  flex: 0 0 48%;                        /* two equal-width columns */
   min-width: 200px;
 }
 
@@ -163,23 +56,24 @@ img.round-photo {
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: inherit;
+  text-align: left;
 }
 
-.interest-list,
-.education-list {
+.info-columns ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.interest-list li,
-.education-list li {
+.info-columns li {
   margin-bottom: 6px;
   line-height: 1.5;
   text-align: left;
 }
 
-/* Education list icons */
+/* =========================
+   EDUCATION LIST ICONS
+   ========================= */
 .education-list li {
   display: flex;
   align-items: flex-start;
@@ -192,19 +86,36 @@ img.round-photo {
 }
 
 /* =========================
-   OTHER MINOR STYLES
+   MOBILE OPTIMIZATION
    ========================= */
-.col-lg-8.text-start {
-  margin-top: 5px;
-}
+@media (max-width: 768px) {
+  body {
+    font-size: 0.85rem;
+  }
 
-p.disclaimer {
-  margin-top: 10px !important;
-  display: block;
+  .info-columns {
+    flex-direction: row !important;     /* keep side-by-side on mobile */
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  .info-columns .column,
+  .info-columns .education-column {
+    flex: 0 0 48%;                      /* narrower so both fit */
+    min-width: 160px;
+  }
+
+  .info-columns h2 {
+    font-size: 1rem;
+  }
+
+  .info-columns li {
+    font-size: 0.8rem;
+  }
 }
 
 /* =========================
-   SHIFTED SECTIONS (below header)
+   SHIFTED SECTIONS
    ========================= */
 .shifted-sections {
   margin-left: 100px;
@@ -213,69 +124,5 @@ p.disclaimer {
 @media (max-width: 768px) {
   .shifted-sections {
     margin-left: 0;
-  }
-}
-
-/* =========================
-   ABSTRACT BOX COLORS (Light/Dark modes)
-   ========================= */
-body.light-theme .card.info {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-body.dark-theme .card.info {
-  background-color: #1e1e1e;
-  color: #ffffff;
-}
-
-.card.info {
-  max-width: 90%;
-  margin-left: 0;
-  margin-right: 1cm;
-  border-radius: 10px;
-}
-
-/* =========================
-   TOGGLE ICONS (ARROWS)
-   ========================= */
-.showAbstract[aria-expanded="false"]::after {
-  font-family: FontAwesome;
-  content: " \f078";
-}
-
-.showAbstract[aria-expanded="true"]::after {
-  font-family: FontAwesome;
-  content: " \f077";
-}
-
-/* =========================
-   MOBILE OPTIMIZATION
-   ========================= */
-@media (max-width: 576px) {
-  body {
-    font-size: 0.85rem;          /* smaller base font */
-  }
-
-  .info-columns {
-    gap: 10px;
-    text-align: left;
-  }
-
-  .info-columns h2 {
-    font-size: 1.1rem;
-    text-align: left;
-  }
-
-  .interest-list li,
-  .education-list li {
-    font-size: 0.85rem;
-    text-align: left;
-  }
-
-  .info-columns .column,
-  .info-columns .education-column {
-    flex: 0 0 48%;              /* still side-by-side */
-    min-width: 160px;
   }
 }
