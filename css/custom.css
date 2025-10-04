@@ -218,29 +218,30 @@ body.dark-theme .card.info {
    ========================= */
 @media (max-width: 576px) {
   body {
-    font-size: 0.85rem;               /* smaller base font */
+    font-size: 0.8rem; /* slightly smaller font */
+    text-align: left;  /* left-align text globally on mobile */
   }
 
+  /* INFO COLUMNS */
   .info-columns {
-    flex-direction: row !important;    /* keep side-by-side on mobile */
+    flex-direction: column !important; /* stack columns vertically */
     gap: 10px;
-    justify-content: space-between;
   }
 
   .info-columns .column,
   .info-columns .education-column {
-    flex: 0 0 48%;                     /* narrower columns for mobile */
-    min-width: 160px;
+    flex: 1 1 100%;  /* full width */
+    min-width: auto;
   }
 
   .info-columns h2 {
-    font-size: 1rem;
+    font-size: 1.1rem; /* smaller headings */
     text-align: left;
   }
 
   .interest-list li,
   .education-list li {
-    font-size: 0.8rem;
+    font-size: 0.85rem; /* smaller list items */
     text-align: left;
   }
 }
