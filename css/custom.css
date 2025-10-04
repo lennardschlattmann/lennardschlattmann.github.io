@@ -77,7 +77,7 @@ img.round-photo {
 }
 
 .social-icon {
-  font-size: 22px;
+  font-size: 26px;
   transition: color 0.3s ease;
 }
 
@@ -199,6 +199,19 @@ body.dark-theme .card.info {
   margin-top: 3px;
   color: inherit;
 }
+
+/* Add bullets for Research Interests */
+.interest-list {
+  list-style: disc;       /* use standard bullets */
+  padding-left: 20px;     /* indent bullets */
+}
+
+.interest-list li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+  text-align: left;       /* keep left-aligned */
+}
+
 
 /* =========================
    SHIFTED SECTIONS BELOW HEADER
