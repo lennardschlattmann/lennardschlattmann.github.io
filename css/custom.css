@@ -268,3 +268,37 @@ body.dark-theme .card.info {
     margin-bottom: 5px;
   }
 }
+
+/* =========================
+   MOBILE OPTIMIZATION: keep side-by-side
+   ========================= */
+.info-columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; /* no vertical wrapping */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  overflow-x: auto; /* horizontal scroll if too tight */
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .info-columns h2 {
+    font-size: 1.2rem;
+  }
+
+  .interest-list li,
+  .education-list li {
+    font-size: 0.9rem;
+  }
+
+  .info-columns .column,
+  .info-columns .education-column {
+    flex: 0 0 48%; /* fixed side-by-side width */
+    min-width: 160px;
+  }
+}
