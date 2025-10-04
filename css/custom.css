@@ -233,11 +233,6 @@ a:hover {
   color: #ffffff;
 }
 
-.edu-details span {
-  color: #a0a7b3;
-  font-size: 0.8rem;
-}
-
 /* Moves only the Welcome text area slightly lower */
 .col-lg-8.text-start {
   margin-top: 5px; /* adjust this value (e.g., 20–40px) for more or less space */
@@ -279,4 +274,24 @@ p.disclaimer {
   margin-left: 0cm;     /* centers it if smaller than container */
   margin-right: 1cm;    /* equal spacing on both sides */
   border-radius: 10px;   /* optional: soften corners */
+}
+
+/* Make social icons centered, closer, and a bit lower */
+.network-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* space between icons */
+  margin-top: 25px;
+  list-style: none;
+  padding: 0;
+}
+
+.social-icon {
+  font-size: 22px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: orange;
 }
