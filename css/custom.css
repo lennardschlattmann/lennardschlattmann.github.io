@@ -102,7 +102,8 @@ img.round-photo {
 
 
 .welcome-text .disclaimer {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  margin-top: 40px;
 }
 
 .mobile-break {
@@ -124,8 +125,12 @@ img.round-photo {
 }
 
 .p_title_p {
-  margin-bottom: 7px;
+  margin-bottom: 0px !important;
   margin-top: 5px;
+}
+
+p.small {
+  margin-bottom: 0 !important;
 }
 
 /* Make abstract links row-aligned */
@@ -134,6 +139,7 @@ img.round-photo {
   flex-wrap: wrap;       /* allow wrapping if too narrow */
   gap: 10px;             /* space between links */
   align-items: center;   /* vertical alignment */
+  margin-top: 0px !important;
 }
 
 /* Abstract card styling */
@@ -199,7 +205,8 @@ body.dark-theme .card.info {
 
 .info-columns h2 {
   font-size: 1.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  margin-top: 40px;
   color: inherit;
   text-align: left;
 }
@@ -350,27 +357,11 @@ body.dark-theme .card.info {
     font-size: 0.75rem !important;
   }
 
-  .welcome-text {
-    /* Use a pseudo-element after the first sentence */
-    white-space: pre-line;
-  }
-
-  .welcome-text::after {
-    content: "\A"; /* \A is a newline */
-    display: block;
-  }
-
 }
 
 /* Desktop-only adjustment: shift Education column to the left */
 @media (min-width: 992px) { /* large screens */
   .info-columns .education-column {
-    margin-left: -20px; /* shift slightly to the left */
+    margin-left: -40px; /* shift slightly to the left */
   }
-}
-
-/* Remove the pseudo-element and white-space override */
-.welcome-text {
-  text-align: justify;
-  font-size: 0.85rem;
 }
