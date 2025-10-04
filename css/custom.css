@@ -304,14 +304,14 @@ body.dark-theme .card.info {
     font-size: 0.8rem;
   }
 
-  /* Reduce space above Education heading */
-  .education-column h2 {
-    margin-top: -6rem; /* smaller than default */
+   /* Reduce space above Education heading */
+  .info-columns .education-column h2 {
+    margin-top: 0.5rem !important; /* force smaller top margin */
   }
 
   /* Add space below the last education item */
-  .education-column .education-list li:last-child {
-    margin-bottom: 4rem; /* adds extra space after last item */
+  .info-columns .education-column .education-list {
+    margin-bottom: 1.5rem !important; /* space after the entire list */
   }
 
    .p_abstract_p {
