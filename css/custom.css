@@ -462,12 +462,35 @@ body.dark-theme .card.info {
 .p_abstract_p a {
   margin-right: 8px;
   line-height: 1.2;
+  font-size: 0.9rem !important;
 }
 
-/* "Media coverage" label */
+/* UNIVERSAL: tighten spacing for media coverage section */
 .media-label {
-  margin-top: -5px;
-  margin-bottom: 5px;
+  margin-top: 0px !important; /* less space above */
+  margin-bottom: 0px !important; /* less space below */
   display: block;
-  font-size: 0.9rem;
+  line-height: 1.2;
+  font-size: 0.9rem !important;
+}
+
+/* UNIVERSAL: links keep same colors */
+.media-label a {
+  color: orange;
+  transition: color 0.3s ease;
+}
+
+.media-label a:hover {
+  color: darkorange;
+}
+
+/* MOBILE ONLY: make label + links smaller */
+@media (max-width: 576px) {
+  .media-label {
+    font-size: 0.8rem !important; /* smaller label */
+  }
+
+  .media-label a {
+    font-size: 0.8rem !important; /* smaller links */
+  }
 }
