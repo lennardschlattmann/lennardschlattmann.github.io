@@ -338,7 +338,7 @@ body.dark-theme .card.info {
 
   /* More space above Education */
   .info-columns .education-column h2 {
-    margin-top: 0.35rem !important; /* add breathing room before Education */
+    margin-top: 0rem !important; /* add breathing room before Education */
   }
 }
 
