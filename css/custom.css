@@ -333,12 +333,12 @@ body.dark-theme .card.info {
 @media (max-width: 576px) {
   /* Less space above Research Interests */
   .info-columns .column h2 {
-    margin-top: 0.25rem !important; /* tighter top margin */
+    margin-top: 0.35rem !important; /* tighter top margin */
   }
 
   /* More space above Education */
   .info-columns .education-column h2 {
-    margin-top: 2rem !important; /* add breathing room before Education */
+    margin-top: 0.35rem !important; /* add breathing room before Education */
   }
 }
 
