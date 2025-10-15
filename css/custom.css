@@ -329,10 +329,19 @@ body.dark-theme .card.info {
     font-size: 0.8rem;
   }
 
-   /* Reduce space above Education heading */
-  .info-columns .education-column h2 {
-    margin-top: -1.75rem !important; /* smaller top margin for mobile */
+/* MOBILE SPACING ADJUSTMENTS FOR INFO COLUMNS */
+@media (max-width: 576px) {
+  /* Less space above Research Interests */
+  .info-columns .column h2 {
+    margin-top: 0.25rem !important; /* tighter top margin */
   }
+
+  /* More space above Education */
+  .info-columns .education-column h2 {
+    margin-top: 2rem !important; /* add breathing room before Education */
+  }
+}
+
 
   /* Add space below the last education item */
   .info-columns .education-column .education-list {
