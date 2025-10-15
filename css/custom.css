@@ -65,6 +65,7 @@ img.round-photo {
 /* =========================
    SOCIAL ICONS
    ========================= */
+/* 1. Ensure that social icons are horizontally aligned */
 .network-icon {
   display: flex;
   justify-content: center;
@@ -74,6 +75,31 @@ img.round-photo {
   list-style: none;
   padding: 0;
 }
+
+/* 2. Make the CV link permanently orange and horizontally aligned */
+.network-icon .cv-link {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0px; /* space after LinkedIn */
+  font-size: 22px; /* adjust as needed */
+  color: orange;  /* always orange */
+  text-decoration: none;
+  font-weight: 600;  /* optional: bold to match the others */
+  margin-bottom: 4px;
+}
+
+/* 3. Remove hover color change for CV link since it's always orange */
+.network-icon .cv-link:hover {
+  color: orange; /* keeps color the same on hover */
+}
+
+/* 4. Optional: font size adjustment for the CV link on mobile */
+@media (max-width: 576px) {
+  .network-icon .cv-link {
+    font-size: 16px; /* smaller text on mobile */
+  }
+}
+
 
 .social-icon {
   font-size: 22px;
@@ -338,7 +364,7 @@ body.dark-theme .card.info {
 
   /* More space above Education */
   .info-columns .education-column h2 {
-    margin-top: -1.0rem !important; /* add breathing room before Education */
+    margin-top: -1.2rem !important; /* add breathing room before Education */
   }
 }
 
