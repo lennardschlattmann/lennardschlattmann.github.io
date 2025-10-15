@@ -338,7 +338,7 @@ body.dark-theme .card.info {
 
   /* More space above Education */
   .info-columns .education-column h2 {
-    margin-top: -2rem !important; /* add breathing room before Education */
+    margin-top: -1.5rem !important; /* add breathing room before Education */
   }
 }
 
@@ -371,7 +371,7 @@ body.dark-theme .card.info {
 /* Desktop-only adjustment: shift Education column to the left */
 @media (min-width: 992px) { /* large screens */
   .info-columns .education-column {
-    margin-left: -40px; /* shift slightly to the left */
+    margin-left: -65px; /* shift slightly to the left */
   }
 }
 
